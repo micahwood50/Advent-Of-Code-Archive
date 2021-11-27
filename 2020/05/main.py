@@ -58,6 +58,6 @@ def part_2():
             break
 
 if __name__ == "__main__":
-    part_1()
-    part_2()
+    # part_1()
+    # part_2()
     pass

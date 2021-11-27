@@ -50,5 +50,6 @@ def part_2():
     print(f"The result of multiplication of the number of trees encountered on each of the listed slopes is {answer}")
 
 if __name__ == "__main__":
-    part_1()
-    part_2()
+    # part_1()
+    # part_2()
+    pass

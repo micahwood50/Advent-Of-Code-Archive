@@ -15,6 +15,6 @@ def get_input() -> list[list[str]]:
 if __name__ == "__main__":
     grid = get_input()
 
-    part_1(grid)
-    part_2(grid)
+    # part_1(grid)
+    # part_2(grid)
     pass

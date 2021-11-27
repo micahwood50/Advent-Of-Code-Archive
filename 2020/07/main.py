@@ -119,6 +119,6 @@ def part_2():
     print(f"There are {total} individual bags inside the single shiny gold bag.")
 
 if __name__ == "__main__":
-    part_1()
-    part_2()
+    # part_1()
+    # part_2()
     pass
