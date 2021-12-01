@@ -63,6 +63,6 @@ def part_2():
     print(f"They should order {result} total feet of ribbon")
 
 if __name__ == "__main__":
-    part_1()
-    part_2()
+    # part_1()
+    # part_2()
     pass
