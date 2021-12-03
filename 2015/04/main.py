@@ -3,8 +3,6 @@ from hashlib import md5
 FILENAME = "input.txt"
 
 def get_input() -> str:
-    input = list()
-
     with open(FILENAME) as file:
         input = file.readline().strip()
 
