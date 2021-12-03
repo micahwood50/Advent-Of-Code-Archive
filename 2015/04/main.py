@@ -10,7 +10,7 @@ def get_input() -> str:
 
 def part_1():
     input = get_input()
-    secret_key = 0
+    secret_key = 1
 
     while not md5(f"{input}{secret_key}".encode()).hexdigest().startswith(5 * '0'):
         secret_key += 1
@@ -19,7 +19,7 @@ def part_1():
 
 def part_2():
     input = get_input()
-    secret_key = 0
+    secret_key = 1
 
     while not md5(f"{input}{secret_key}".encode()).hexdigest().startswith(6 * '0'):
         secret_key += 1
