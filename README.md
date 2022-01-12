@@ -62,3 +62,13 @@ I will start and catch up after 2021 event ends!
 |[**Day 11**](2020/11/)|[**Day 12**](2020/12/main.py)|[**Day 13**](2020/13/main.py)|[**Day 14**](2020/14/main.py)|[**Day 15**](2020/15/main.py)|
 |[**Day 16**]|[**Day 17**]|[**Day 18**](2020/18/)|[**Day 19**](2020/19/main.py)|[**Day 20**]|
 |[**Day 21**](2020/21/main.py)|[**Day 22**]|[**Day 23**]|[**Day 24**]|[**Day 25**]|
+
+<br />
+
+# 2021
+|[Day 1](2021/01/main.py)|[Day 2](2021/02/main.py)|[Day 3](2021/03/main.py)|[Day 4](2021/04/main.py)|[Day 5](2021/05/main.py)|
+| :---: | :---: | :---: | :---: | :---: |
+|[**Day 6**](2021/06/main.py)|[**Day 7**](2021/07/main.py)|[**Day 8**](2021/08/main.py)|[**Day 9**](2021/09/main.py)|[**Day 10**](2021/10/main.py)|
+|[**Day 11**](2021/11/main.py)|[**Day 12**](2021/12/main.py)|[**Day 13**](2021/13/main.py)|[**Day 14**](2021/14/main.py)|[**Day 15**]|
+|[**Day 16**]|[**Day 17**](2021/17/main.py)|[**Day 18**](2021/18/main.py)|[**Day 19**]|[**Day 20**](2021/20/main.py)|
+|[**Day 21**](2021/21/main.py)|[**Day 22**](2021/22/main.py)|[**Day 23**]|[**Day 24**]|[**Day 25**]|
