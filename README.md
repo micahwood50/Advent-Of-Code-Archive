@@ -1,7 +1,5 @@
 # Advent Of Code Archive
-All my solution for past [Advent of Code](https://adventofcode.com) events. Any feedback is welcome!
-
-I will start and catch up after 2021 event ends!
+All my solutions for past [Advent of Code](https://adventofcode.com) events. Any feedback is welcome!
 
 <br />
 
