@@ -1,33 +1,35 @@
 FILENAME = "input.txt"
 
+
 def get_input() -> str:
     with open(FILENAME) as file:
         directions = file.readline().strip()
 
     return directions
 
+
 def part_1():
     directions = get_input()
 
     visited_set = set()
     visited_again_set = set()
-    coordinate = (0,0)
+    coordinate = (0, 0)
 
     visited_set.add(coordinate)
 
     for direction in directions:
         x, y = coordinate
 
-        if direction == '>':
+        if direction == ">":
             x += 1
 
-        elif direction == '<':
+        elif direction == "<":
             x -= 1
 
-        elif direction == '^':
+        elif direction == "^":
             y += 1
 
-        elif direction == 'v':
+        elif direction == "v":
             y -= 1
 
         else:
@@ -46,13 +48,14 @@ def part_1():
 
     print(f"Answer is {result}")
 
+
 def part_2():
     directions = get_input()
 
     visited_set = set()
     visited_again_set = set()
-    real_santa_coordinate = (0,0)
-    robot_santa_coordinate = (0,0)
+    real_santa_coordinate = (0, 0)
+    robot_santa_coordinate = (0, 0)
     turn = 0
 
     visited_set.add(real_santa_coordinate)
@@ -63,16 +66,16 @@ def part_2():
         else:
             x, y = robot_santa_coordinate
 
-        if direction == '>':
+        if direction == ">":
             x += 1
 
-        elif direction == '<':
+        elif direction == "<":
             x -= 1
 
-        elif direction == '^':
+        elif direction == "^":
             y += 1
 
-        elif direction == 'v':
+        elif direction == "v":
             y -= 1
 
         else:
@@ -97,6 +100,7 @@ def part_2():
     result = len(visited_set)
 
     print(f"Answer is {result}")
+
 
 if __name__ == "__main__":
     # part_1()

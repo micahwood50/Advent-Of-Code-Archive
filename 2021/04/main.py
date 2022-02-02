@@ -1,11 +1,14 @@
 FILENAME = "input.txt"
 
+
 class Bingo:
     def __init__(self, board: list[list[int]]):
         self.board = board
         self.length = len(board)
 
-        self.mark_board = [[False for __ in range(len(board))] for __ in range(len(board))]
+        self.mark_board = [
+            [False for __ in range(len(board))] for __ in range(len(board))
+        ]
         self.won = False
 
     def mark(self, drawn_num: int):
@@ -39,11 +42,12 @@ class Bingo:
 
         return last_drawn_num * result
 
+
 def get_input() -> tuple[list[int], list[Bingo]]:
     bingo_list = list()
 
     with open(FILENAME) as file:
-        draw_nums = list(map(int, file.readline().split(',')))
+        draw_nums = list(map(int, file.readline().split(",")))
 
         bingo_buffer = list()
 
@@ -62,6 +66,7 @@ def get_input() -> tuple[list[int], list[Bingo]]:
 
     return draw_nums, bingo_list
 
+
 def part_1():
     nums, bingo_list = get_input()
 
@@ -70,10 +75,13 @@ def part_1():
             bingo.mark(num)
 
             if bingo.is_win():
-                print(f"The final score of the chosen board is {bingo.calculate_score(num)}")
+                print(
+                    f"The final score of the chosen board is {bingo.calculate_score(num)}"
+                )
                 return
 
     raise ValueError("There is no winning board!")
+
 
 def part_2():
     nums, bingo_list = get_input()
@@ -91,6 +99,7 @@ def part_2():
         raise ValueError("There is no winning board!")
 
     print(f"The final score of the last winning board is {final_score}")
+
 
 if __name__ == "__main__":
     # part_1()

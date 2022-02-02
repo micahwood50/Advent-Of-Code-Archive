@@ -2,10 +2,12 @@ from functools import reduce
 
 FILENAME = "input.txt"
 
+
 class BusTime:
     def __init__(self, depart_time, services):
         self.time = depart_time
         self.bus_services = services
+
 
 def get_input() -> BusTime:
     lines = list()
@@ -14,11 +16,11 @@ def get_input() -> BusTime:
         for line in f.readlines():
             lines.append(line.strip())
 
-    IDs_temp = lines[1].split(',')
+    IDs_temp = lines[1].split(",")
     IDs = list()
 
     for i, e in enumerate(IDs_temp):
-        if e == 'x':
+        if e == "x":
             continue
 
         else:
@@ -26,6 +28,7 @@ def get_input() -> BusTime:
             IDs.append(m)
 
     return BusTime(int(lines[0]), IDs)
+
 
 def CRT_calculator(A_list, N_list) -> int:
     """Solve the simultaneous congruences using Chinese Remainder Theorem (CRT)
@@ -46,27 +49,34 @@ def CRT_calculator(A_list, N_list) -> int:
     Returns:
         int: Smallest positive integer x such that it satisfies all congruences.
     """
-    def get_inverse(c, n):
-        r = c%n
 
-        if r == 1 or r == n-1:
+    def get_inverse(c, n):
+        r = c % n
+
+        if r == 1 or r == n - 1:
             return r
 
-        for i in range(2, n-1):
-            if (c*i)%n == 1:
+        for i in range(2, n - 1):
+            if (c * i) % n == 1:
                 return i
 
         raise ArithmeticError("No solution!")
 
-    n = reduce(lambda x, y: x*y, N_list)
+    n = reduce(lambda x, y: x * y, N_list)
 
-    C_list = [n//ni for ni in N_list]
+    C_list = [n // ni for ni in N_list]
 
     D_list = [get_inverse(ci, ni) for ci, ni in zip(C_list, N_list)]
 
-    result = reduce(lambda x, y: x+y, [a*c*d for a, c, d in zip(A_list, C_list, D_list)]) % n
+    result = (
+        reduce(
+            lambda x, y: x + y, [a * c * d for a, c, d in zip(A_list, C_list, D_list)]
+        )
+        % n
+    )
 
     return result
+
 
 def part_1():
     bus_time = get_input()
@@ -74,17 +84,19 @@ def part_1():
     bus_id_to_take = -1
 
     for i, _ in bus_time.bus_services:
-        if bus_time.time%i == 0:
+        if bus_time.time % i == 0:
             return
 
-        if i - bus_time.time%i < earliest_time:
-            earliest_time = i - bus_time.time%i
+        if i - bus_time.time % i < earliest_time:
+            earliest_time = i - bus_time.time % i
             bus_id_to_take = i
 
-    print("The ID of the earliest bus you can take to the airport "
+    print(
+        "The ID of the earliest bus you can take to the airport "
         "multiplied by the number of minutes you'll need to wait for that bus is "
         f"{earliest_time * bus_id_to_take}"
     )
+
 
 def part_2():
     bus_time = get_input()
@@ -98,10 +110,12 @@ def part_2():
 
     result = CRT_calculator(A_list, N_list)
 
-    print("the earliest timestamp such that "
+    print(
+        "the earliest timestamp such that "
         "all of the listed bus IDs depart at offsets matching their positions in the list is "
         f"{result}"
     )
+
 
 if __name__ == "__main__":
     # part_1()

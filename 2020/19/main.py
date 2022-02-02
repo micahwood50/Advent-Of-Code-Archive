@@ -3,6 +3,7 @@ import re
 
 FILENAME = "input.txt"
 
+
 def get_input() -> tuple[dict[int, Union[str, list[list[int]]]], list[str]]:
     rules = dict()
     messages = list()
@@ -24,13 +25,15 @@ def get_input() -> tuple[dict[int, Union[str, list[list[int]]]], list[str]]:
                     rules[int(lside)] = rside.strip()[1]
 
                 else:
-                    rules[int(lside)] = \
-                        [list(map(int, v.split())) for v in rside.split(" | ")]
+                    rules[int(lside)] = [
+                        list(map(int, v.split())) for v in rside.split(" | ")
+                    ]
 
             else:
                 messages.append(line)
 
     return rules, messages
+
 
 def generate_grammar(rules, curr_num: int = 0, depth: int = 0) -> str:
     if depth > 50:
@@ -53,11 +56,12 @@ def generate_grammar(rules, curr_num: int = 0, depth: int = 0) -> str:
 
     return result
 
+
 def part_1():
     rules, messages = get_input()
     count = 0
 
-    grammar_str = '^' + generate_grammar(rules) + '$'
+    grammar_str = "^" + generate_grammar(rules) + "$"
     grammar = re.compile(grammar_str)
 
     for message in messages:
@@ -65,6 +69,7 @@ def part_1():
             count += 1
 
     print(f"{count} messages completely match rule 0.")
+
 
 def part_2():
     rules, messages = get_input()
@@ -75,7 +80,7 @@ def part_2():
 
     count = 0
 
-    grammar_str = '^' + generate_grammar(rules) + '$'
+    grammar_str = "^" + generate_grammar(rules) + "$"
     grammar = re.compile(grammar_str)
 
     for message in messages:
@@ -83,6 +88,7 @@ def part_2():
             count += 1
 
     print(f"{count} messages completely match rule 0.")
+
 
 if __name__ == "__main__":
     # part_1()

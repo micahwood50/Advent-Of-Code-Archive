@@ -2,6 +2,7 @@ from collections import Counter, defaultdict
 
 FILENAME = "input.txt"
 
+
 def get_input() -> tuple[str, dict[str, str]]:
     insertion_dict = dict()
 
@@ -15,6 +16,7 @@ def get_input() -> tuple[str, dict[str, str]]:
 
     return template, insertion_dict
 
+
 def part_1():
     polymer, insertion_dict = get_input()
     result = 0
@@ -22,8 +24,8 @@ def part_1():
     for __ in range(10):
         this_polymer = ""
 
-        for i in range(len(polymer)-1):
-            this_polymer += polymer[i] + insertion_dict[polymer[i:i+2]]
+        for i in range(len(polymer) - 1):
+            this_polymer += polymer[i] + insertion_dict[polymer[i : i + 2]]
 
         polymer = this_polymer + polymer[-1]
 
@@ -32,14 +34,15 @@ def part_1():
 
     print(f"Answer is {result}")
 
+
 def part_2():
     template, insertion_dict = get_input()
     result = 0
 
     pair_counters = defaultdict(int)
 
-    for i in range(len(template)-1):
-        pair_counters[template[i:i+2]] += 1
+    for i in range(len(template) - 1):
+        pair_counters[template[i : i + 2]] += 1
 
     for __ in range(40):
         temp_dict = defaultdict(int)
@@ -67,6 +70,7 @@ def part_2():
     result = max(char_counters.values()) - min(char_counters.values())
 
     print(f"Answer is {result}")
+
 
 if __name__ == "__main__":
     # part_1()

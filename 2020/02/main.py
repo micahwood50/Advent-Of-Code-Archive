@@ -2,6 +2,7 @@ import re
 
 FILENAME = "input.txt"
 
+
 class Policy:
     def __init__(self, num1, num2, letter, password):
         self.num1 = num1
@@ -12,8 +13,9 @@ class Policy:
     def __str__(self):
         return f"Policy({self.num1}, {self.num2}, '{self.letter}', \"{self.password}\")"
 
+
 def get_input() -> list[Policy]:
-    """ Read the file and generate a list of policies
+    """Read the file and generate a list of policies
 
     Returns:
         list[Policy]: A list of policies
@@ -26,15 +28,11 @@ def get_input() -> list[Policy]:
         for line in f.readlines():
             m = re.match(re_pattern, line)
             policies_list.append(
-                Policy(
-                    int(m.group(1)),
-                    int(m.group(2)),
-                    m.group(3),
-                    m.group(4)
-                )
+                Policy(int(m.group(1)), int(m.group(2)), m.group(3), m.group(4))
             )
 
     return policies_list
+
 
 def part_1():
     policies_list = get_input()
@@ -51,15 +49,19 @@ def part_1():
 
     print(f"There are {valid_count} valid passwords.")
 
+
 def part_2():
     policies_list = get_input()
     valid_count = 0
 
     for policy in policies_list:
-        if (policy.password[policy.num1-1] == policy.letter) ^ (policy.password[policy.num2-1] == policy.letter):
+        if (policy.password[policy.num1 - 1] == policy.letter) ^ (
+            policy.password[policy.num2 - 1] == policy.letter
+        ):
             valid_count += 1
 
     print(f"There are {valid_count} valid passwords.")
+
 
 if __name__ == "__main__":
     # part_1()

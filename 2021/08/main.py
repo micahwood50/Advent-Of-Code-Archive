@@ -1,5 +1,6 @@
 FILENAME = "input.txt"
 
+
 class DigitSegments:
     def __init__(self, pattern_list: list[str]):
         #
@@ -67,13 +68,15 @@ class DigitSegments:
         # Step 4: deduce b and e
 
         for s5_element in S5:
-            if c in s5_element and f in s5_element: # All segments in digit 3 are already deduced
+            if (
+                c in s5_element and f in s5_element
+            ):  # All segments in digit 3 are already deduced
                 continue
 
-            if c in s5_element: # Digit 2
+            if c in s5_element:  # Digit 2
                 e = list(s5_element - {a, c, d, g})[0]
 
-            else: # f is in s5_element; Digit 5
+            else:  # f is in s5_element; Digit 5
                 b = list(s5_element - {a, d, f, g})[0]
 
         #
@@ -82,16 +85,16 @@ class DigitSegments:
 
         # We use frozenset as a hashable set
         self._digit_dict = {
-            frozenset(a + b + c +     e + f + g) : 0,
-            frozenset(        c +         f    ) : 1,
-            frozenset(a +     c + d + e +     g) : 2,
-            frozenset(a +     c + d +     f + g) : 3,
-            frozenset(    b + c + d +     f    ) : 4,
-            frozenset(a + b +     d +     f + g) : 5,
-            frozenset(a + b +     d + e + f + g) : 6,
-            frozenset(a +     c +         f    ) : 7,
-            frozenset(a + b + c + d + e + f + g) : 8,
-            frozenset(a + b + c + d +     f + g) : 9
+            frozenset(a + b + c + e + f + g): 0,
+            frozenset(c + f): 1,
+            frozenset(a + c + d + e + g): 2,
+            frozenset(a + c + d + f + g): 3,
+            frozenset(b + c + d + f): 4,
+            frozenset(a + b + d + f + g): 5,
+            frozenset(a + b + d + e + f + g): 6,
+            frozenset(a + c + f): 7,
+            frozenset(a + b + c + d + e + f + g): 8,
+            frozenset(a + b + c + d + f + g): 9,
         }
 
     def get_digit(self, digit_pattern: str):
@@ -102,17 +105,19 @@ class DigitSegments:
 
         return self._digit_dict[digit_set]
 
+
 def get_input() -> tuple[list[list[str]], list[list[str]]]:
     patterns_list = list()
-    outputs_list  = list()
+    outputs_list = list()
 
     with open(FILENAME) as file:
         for line in file.readlines():
-            pattern_line, output_line = line.split(' | ')
+            pattern_line, output_line = line.split(" | ")
             patterns_list.append(pattern_line.split())
             outputs_list.append(output_line.split())
 
     return patterns_list, outputs_list
+
 
 def part_1():
     _, outputs_list = get_input()
@@ -124,6 +129,7 @@ def part_1():
                 result += 1
 
     print(f"Digits 1, 4, 7, or 8 appear {result} times")
+
 
 def part_2():
     patterns_list, outputs_list = get_input()
@@ -139,6 +145,7 @@ def part_2():
         result += num
 
     print(f"The sum of all the output values is {result}")
+
 
 if __name__ == "__main__":
     # part_1()

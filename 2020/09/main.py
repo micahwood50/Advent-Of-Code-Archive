@@ -2,6 +2,7 @@ from typing import List
 
 FILENAME = "input.txt"
 
+
 def get_input() -> List[int]:
     lines = list()
 
@@ -10,6 +11,7 @@ def get_input() -> List[int]:
             lines.append(int(line))
 
     return lines
+
 
 def part_1():
     nums = get_input()
@@ -20,22 +22,23 @@ def part_1():
 
     for i in range(25, len(nums)):
         for xn in xmas:
-            if nums[i]-xn in xmas:
+            if nums[i] - xn in xmas:
                 break
 
         else:
             print(f"The first number that does not have this property is {nums[i]}")
             return
 
-        xmas.remove(nums[i-25])
+        xmas.remove(nums[i - 25])
         xmas.add(nums[i])
 
     print("Something went wrong!")
 
+
 def part_2():
     nums = get_input()
 
-    goal_num = 21806024 # Answer obtained from part 1
+    goal_num = 21806024  # Answer obtained from part 1
 
     sub_sum = 0
     i, j = 0, 0
@@ -53,10 +56,13 @@ def part_2():
             min_sub_nums = min(nums[i:j])
             max_sub_nums = max(nums[i:j])
 
-            print(f"The encryption weakness in your XMAS-encrypted list of numbers is {min_sub_nums + max_sub_nums}")
+            print(
+                f"The encryption weakness in your XMAS-encrypted list of numbers is {min_sub_nums + max_sub_nums}"
+            )
             return
 
     print("Something went wrong!")
+
 
 if __name__ == "__main__":
     # part_1()

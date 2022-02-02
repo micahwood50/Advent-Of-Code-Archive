@@ -3,10 +3,11 @@ from pprint import pprint
 
 FILENAME = "input.txt"
 
-def flatten_json(json_obj, ignore_red = False):
+
+def flatten_json(json_obj, ignore_red=False):
     result = dict()
 
-    def flatten(obj, name = ""):
+    def flatten(obj, name=""):
         if type(obj) is dict:
             if ignore_red:
                 for key in obj:
@@ -26,11 +27,13 @@ def flatten_json(json_obj, ignore_red = False):
     flatten(json_obj)
     return result
 
+
 def get_input() -> dict:
     with open(FILENAME) as file:
         json_object = json.load(file)
 
     return json_object
+
 
 def part_1():
     json_object = get_input()
@@ -44,6 +47,7 @@ def part_1():
 
     print(f"The sum of all numbers in the document is {result}")
 
+
 def part_2():
     json_object = get_input()
     result = 0
@@ -55,6 +59,7 @@ def part_2():
             result += val
 
     print(f"The right sum of all numbers in the document is {result}")
+
 
 if __name__ == "__main__":
     # part_1()

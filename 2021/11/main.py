@@ -1,10 +1,15 @@
 FILENAME = "input.txt"
 
+
 def get_next_step(grid: list[list[int]]) -> tuple[list[list[int]], int]:
     visited_set = set()
 
     def flash(ri: int, ci: int):
-        if (ri, ci) in visited_set or not (0 <= ri < len(grid)) or not (0 <= ci < len(grid[0])):
+        if (
+            (ri, ci) in visited_set
+            or not (0 <= ri < len(grid))
+            or not (0 <= ci < len(grid[0]))
+        ):
             return
 
         grid[ri][ci] += 1
@@ -31,6 +36,7 @@ def get_next_step(grid: list[list[int]]) -> tuple[list[list[int]], int]:
 
     return grid, len(visited_set)
 
+
 def is_all_flash(grid: list[list[int]]) -> bool:
     for row in grid:
         for num in row:
@@ -38,6 +44,7 @@ def is_all_flash(grid: list[list[int]]) -> bool:
                 return False
 
     return True
+
 
 def get_input() -> list[list[int]]:
     grid = list()
@@ -47,6 +54,7 @@ def get_input() -> list[list[int]]:
             grid.append(list(int(ch) for ch in line.strip()))
 
     return grid
+
 
 def part_1():
     grid = get_input()
@@ -59,6 +67,7 @@ def part_1():
 
     print(f"There are {result} total flashes after {N} steps")
 
+
 def part_2():
     grid = get_input()
     step_count = 0
@@ -70,6 +79,7 @@ def part_2():
             break
 
     print(f"The first step during which all octopuses flash is {step_count}")
+
 
 if __name__ == "__main__":
     # part_1()

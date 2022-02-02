@@ -1,5 +1,6 @@
 FILENAME = "input.txt"
 
+
 class SnailfishNumber:
     ### WARNING: __add__ type of methods are DESTRUCTIVE!
     def __init__(self, list_num, depth: int = 0, do_reduce: bool = True):
@@ -66,8 +67,10 @@ class SnailfishNumber:
     def reduce(self):
         S_list = list()
 
-        def reduce_helper(num, depth = self.depth, parent_num = None, parent_num_index = None):
-            left_num  = num.left
+        def reduce_helper(
+            num, depth=self.depth, parent_num=None, parent_num_index=None
+        ):
+            left_num = num.left
             right_num = num.right
 
             if type(left_num) is int:
@@ -83,21 +86,28 @@ class SnailfishNumber:
         reduce_helper(self)
 
         while True:
-            for index, [regular_num, depth, snail_num, snail_index, parent_snail, parent_index] in enumerate(S_list):
+            for index, [
+                regular_num,
+                depth,
+                snail_num,
+                snail_index,
+                parent_snail,
+                parent_index,
+            ] in enumerate(S_list):
                 if depth >= 4:
-                    assert type(snail_num.left)  is int
+                    assert type(snail_num.left) is int
                     assert type(snail_num.right) is int
                     # explode here
                     if index > 0:
-                        _, _, snail_num, snail_index, *_ = S_list[index-1]
+                        _, _, snail_num, snail_index, *_ = S_list[index - 1]
                         if snail_index == 0:
                             snail_num.left += regular_num
                         else:
                             snail_num.right += regular_num
 
-                    if index < len(S_list)-2:
-                        regular_num, *_ = S_list[index+1]
-                        _, _, snail_num, snail_index, *_ = S_list[index+2]
+                    if index < len(S_list) - 2:
+                        regular_num, *_ = S_list[index + 1]
+                        _, _, snail_num, snail_index, *_ = S_list[index + 2]
                         if snail_index == 0:
                             snail_num.left += regular_num
                         else:
@@ -112,7 +122,14 @@ class SnailfishNumber:
             else:
                 # No explosion occur; check for split
 
-                for index, [regular_num, depth, snail_num, snail_index, parent_snail, parent_index] in enumerate(S_list):
+                for index, [
+                    regular_num,
+                    depth,
+                    snail_num,
+                    snail_index,
+                    parent_snail,
+                    parent_index,
+                ] in enumerate(S_list):
                     if regular_num > 9:
                         # split here
                         if regular_num % 2 == 0:
@@ -122,10 +139,12 @@ class SnailfishNumber:
                             new_left = regular_num // 2
                             new_right = regular_num // 2 + 1
 
-                        new_pair = SnailfishNumber([new_left, new_right], depth + 1, False)
+                        new_pair = SnailfishNumber(
+                            [new_left, new_right], depth + 1, False
+                        )
 
                         if snail_index == 0:
-                            snail_num.left  = new_pair
+                            snail_num.left = new_pair
                         else:
                             snail_num.right = new_pair
 
@@ -140,10 +159,15 @@ class SnailfishNumber:
             reduce_helper(self)
 
     def calculate_magnitude(self) -> int:
-        left_num  = self.left  if type(self.left)  is int else self.left.calculate_magnitude()
-        right_num = self.right if type(self.right) is int else self.right.calculate_magnitude()
+        left_num = (
+            self.left if type(self.left) is int else self.left.calculate_magnitude()
+        )
+        right_num = (
+            self.right if type(self.right) is int else self.right.calculate_magnitude()
+        )
 
         return 3 * left_num + 2 * right_num
+
 
 def get_input() -> list[SnailfishNumber]:
     snailfish_list = list()
@@ -154,6 +178,7 @@ def get_input() -> list[SnailfishNumber]:
 
     return snailfish_list
 
+
 def get_input_str() -> list[str]:
     snailfish_list = list()
 
@@ -163,10 +188,14 @@ def get_input_str() -> list[str]:
 
     return snailfish_list
 
+
 def part_1():
     snailfish_list = get_input()
 
-    print(f"The magnitude of the final sum is {sum(snailfish_list).calculate_magnitude()}")
+    print(
+        f"The magnitude of the final sum is {sum(snailfish_list).calculate_magnitude()}"
+    )
+
 
 def part_2():
     snailfish_list = get_input_str()
@@ -182,7 +211,10 @@ def part_2():
 
             result = max(result, (snail_i + snail_j).calculate_magnitude())
 
-    print(f"The largest magnitude of any sum of two different snailfish numbers is {result}")
+    print(
+        f"The largest magnitude of any sum of two different snailfish numbers is {result}"
+    )
+
 
 if __name__ == "__main__":
     # part_1()

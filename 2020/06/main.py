@@ -2,8 +2,9 @@ from typing import List
 
 FILENAME = "input.txt"
 
+
 def get_input() -> List[List[str]]:
-    """ Read the file and generate a list of seat strings
+    """Read the file and generate a list of seat strings
 
     Returns:
         [List[str]]: A list of seat strings
@@ -24,6 +25,7 @@ def get_input() -> List[List[str]]:
 
     return groups
 
+
 def part_1():
     groups = get_input()
     count = 0
@@ -32,6 +34,7 @@ def part_1():
         count += len(set("".join(group)))
 
     print(f"The sum of those counts is {count}")
+
 
 def part_2():
     groups = get_input()
@@ -46,6 +49,7 @@ def part_2():
         count += len(question_set)
 
     print(f"The sum of those counts is {count}")
+
 
 if __name__ == "__main__":
     # part_1()

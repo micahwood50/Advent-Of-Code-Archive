@@ -2,6 +2,7 @@ from collections import defaultdict
 
 FILENAME = "input.txt"
 
+
 class Node:
     def __init__(self, name: str):
         self.name = name
@@ -16,6 +17,7 @@ class Node:
     def __ne__(self, other):
         return not self.__eq__(other)
 
+
 class Graph:
     def __init__(self):
         self.nodes = set()
@@ -28,7 +30,13 @@ class Graph:
         self.neighbors[node1.name].append(node2)
         self.neighbors[node2.name].append(node1)
 
-    def _count_paths_helper(self, current_node: Node, visited_set: set[str], is_small_visited: bool, is_visited_twice: bool) -> int:
+    def _count_paths_helper(
+        self,
+        current_node: Node,
+        visited_set: set[str],
+        is_small_visited: bool,
+        is_visited_twice: bool,
+    ) -> int:
         if current_node.name in visited_set:
             if is_visited_twice or current_node.name == "start":
                 return 0
@@ -51,7 +59,9 @@ class Graph:
         result = 0
 
         for node_neighbor in self.neighbors[current_node.name]:
-            result += self._count_paths_helper(node_neighbor, visited_set, is_small_visited, is_visited_twice)
+            result += self._count_paths_helper(
+                node_neighbor, visited_set, is_small_visited, is_visited_twice
+            )
 
         if not visited_twice_flag:
             visited_set.discard(current_node.name)
@@ -60,15 +70,16 @@ class Graph:
 
     def count_paths(self) -> int:
         assert "start" in self.neighbors
-        assert "end"   in self.neighbors
+        assert "end" in self.neighbors
 
         return self._count_paths_helper(Node("start"), set(), False, True)
 
     def count_paths_visit_twice(self) -> int:
         assert "start" in self.neighbors
-        assert "end"   in self.neighbors
+        assert "end" in self.neighbors
 
         return self._count_paths_helper(Node("start"), set(), False, False)
+
 
 def get_input() -> Graph:
     graph = Graph()
@@ -82,15 +93,20 @@ def get_input() -> Graph:
 
     return graph
 
+
 def part_1():
     graph = get_input()
 
     print(f"There are {graph.count_paths()} distinct paths in this cave system")
 
+
 def part_2():
     graph = get_input()
 
-    print(f"There are {graph.count_paths_visit_twice()} distinct paths in this cave system")
+    print(
+        f"There are {graph.count_paths_visit_twice()} distinct paths in this cave system"
+    )
+
 
 if __name__ == "__main__":
     # part_1()

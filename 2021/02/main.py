@@ -1,5 +1,6 @@
 FILENAME = "input.txt"
 
+
 def get_input() -> list[tuple[int, int]]:
     vector_list = list()
 
@@ -24,6 +25,7 @@ def get_input() -> list[tuple[int, int]]:
 
     return vector_list
 
+
 def part_1():
     vector_list = get_input()
     horizontal_pos, depth = 0, 0
@@ -33,7 +35,10 @@ def part_1():
         horizontal_pos += x
         depth += y
 
-    print(f"The multiplication of the final horizontal position and the final depth is {horizontal_pos * depth}")
+    print(
+        f"The multiplication of the final horizontal position and the final depth is {horizontal_pos * depth}"
+    )
+
 
 def part_2():
     vector_list = get_input()
@@ -50,7 +55,10 @@ def part_2():
         else:
             aim += y
 
-    print(f"The multiplication of the final horizontal position and the final depth is {horizontal_pos * depth}")
+    print(
+        f"The multiplication of the final horizontal position and the final depth is {horizontal_pos * depth}"
+    )
+
 
 if __name__ == "__main__":
     # part_1()

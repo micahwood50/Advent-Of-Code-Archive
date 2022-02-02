@@ -1,5 +1,6 @@
 FILENAME = "input.txt"
 
+
 def get_input() -> list[int]:
     depth_list = list()
 
@@ -8,6 +9,7 @@ def get_input() -> list[int]:
             depth_list.append(int(line))
 
     return depth_list
+
 
 def part_1():
     depth_list = get_input()
@@ -22,7 +24,10 @@ def part_1():
 
         prev_depth = depth
 
-    print(f"There are {result} measurements that are larger than the previous measurement")
+    print(
+        f"There are {result} measurements that are larger than the previous measurement"
+    )
+
 
 def part_2():
     depth_list = get_input()
@@ -32,7 +37,7 @@ def part_2():
     # Assume the depth list is longer than window size, otherwise this will throw IndexError
     prev_sum = sum(depth_list[i] for i in range(window_size))
 
-    for index, depth in enumerate(depth_list[window_size:], start = window_size):
+    for index, depth in enumerate(depth_list[window_size:], start=window_size):
         curr_sum = prev_sum - depth_list[index - window_size] + depth
 
         if curr_sum > prev_sum:
@@ -41,6 +46,7 @@ def part_2():
         prev_sum = curr_sum
 
     print(f"There are {result} sums that are larger than the previous sum")
+
 
 if __name__ == "__main__":
     # part_1()

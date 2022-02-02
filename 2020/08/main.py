@@ -2,8 +2,9 @@ from typing import Dict, Set
 
 FILENAME = "input.txt"
 
+
 class Instruction:
-    def __init__(self, line_num, operation, argument = 0):
+    def __init__(self, line_num, operation, argument=0):
         self.line_num = line_num
         self.opr = operation
         self.arg = argument
@@ -20,12 +21,14 @@ class Instruction:
     def change_operation(self, new_operation: str):
         self.opr = new_operation
 
+
 class InfiniteLoopError(Exception):
-    def __init__(self, value = 0):
+    def __init__(self, value=0):
         self.val = value
 
     def get_value(self):
         return self.val
+
 
 def get_input() -> Dict[int, Instruction]:
     instructions = dict()
@@ -39,19 +42,20 @@ def get_input() -> Dict[int, Instruction]:
 
     return instructions
 
+
 def simulate(
-        instructions: Dict[int, Instruction],
-        line_num: int = 1,
-        acc: int = 0,
-        visited: Set[int] = None
-    ) -> int:
+    instructions: Dict[int, Instruction],
+    line_num: int = 1,
+    acc: int = 0,
+    visited: Set[int] = None,
+) -> int:
 
     if visited is None:
         visited = set()
 
     last_line_num = max(instructions.keys())
 
-    while line_num != last_line_num+1:
+    while line_num != last_line_num + 1:
         if line_num in visited:
             raise InfiniteLoopError(acc)
 
@@ -66,11 +70,12 @@ def simulate(
             acc += arg
 
         elif opr == "jmp":
-            line_num += arg-1
+            line_num += arg - 1
 
         line_num += 1
 
     return acc
+
 
 def part_1():
     instructions = get_input()
@@ -81,8 +86,11 @@ def part_1():
     except InfiniteLoopError as e:
         acc = e.get_value()
 
-    print("Immediately before the program would run an instruction a second time, "
-        f"the value in the accumulator is {acc}.")
+    print(
+        "Immediately before the program would run an instruction a second time, "
+        f"the value in the accumulator is {acc}."
+    )
+
 
 def part_2():
     instructions = get_input()
@@ -111,7 +119,7 @@ def part_2():
             except (InfiniteLoopError, IndexError):
                 instructions[line_num].change_operation("jmp")
                 visited.add(line_num)
-                line_num += arg-1
+                line_num += arg - 1
 
         else:
             try:
@@ -126,6 +134,7 @@ def part_2():
         line_num += 1
 
     print(f"the value of the accumulator after the program terminates is {acc}.")
+
 
 if __name__ == "__main__":
     # part_1()

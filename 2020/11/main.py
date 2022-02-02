@@ -3,6 +3,7 @@ from part2 import run_solution as part_2
 
 FILENAME = "input.txt"
 
+
 def get_input() -> list[list[str]]:
     grid = list()
 
@@ -11,6 +12,7 @@ def get_input() -> list[list[str]]:
             grid.append(list(line.strip()))
 
     return grid
+
 
 if __name__ == "__main__":
     grid = get_input()

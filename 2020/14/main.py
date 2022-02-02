@@ -3,8 +3,9 @@ from pprint import pprint
 
 FILENAME = "input.txt"
 
-MASK_COMMAND = '0'
-MEM_COMMAND = '1'
+MASK_COMMAND = "0"
+MEM_COMMAND = "1"
+
 
 def get_input() -> list[tuple[str]]:
     lines = list()
@@ -24,11 +25,12 @@ def get_input() -> list[tuple[str]]:
 
     return lines
 
-def mask_num_v1(n: int, mask_str: str) -> int:
-    bn = list('0'*len(mask_str) + bin(n)[2:])
 
-    for i in range(-1, -len(mask_str)-1, -1):
-        if mask_str[i] == 'X':
+def mask_num_v1(n: int, mask_str: str) -> int:
+    bn = list("0" * len(mask_str) + bin(n)[2:])
+
+    for i in range(-1, -len(mask_str) - 1, -1):
+        if mask_str[i] == "X":
             continue
 
         bn[i] = mask_str[i]
@@ -39,22 +41,24 @@ def mask_num_v1(n: int, mask_str: str) -> int:
 
     return result
 
+
 def floating(string: str) -> set[int]:
-    if 'X' not in string:
+    if "X" not in string:
         return {int(string, 2)}
 
-    index = string.index('X')
+    index = string.index("X")
 
-    s0 = string[:index] + '0' + string[index+1:]
-    s1 = string[:index] + '1' + string[index+1:]
+    s0 = string[:index] + "0" + string[index + 1 :]
+    s1 = string[:index] + "1" + string[index + 1 :]
 
-    return floating( s0 ) | floating( s1 )
+    return floating(s0) | floating(s1)
+
 
 def mask_num_v2(n: int, mask_str: str) -> set[int]:
-    bn = list('0'*len(mask_str) + bin(n)[2:])
+    bn = list("0" * len(mask_str) + bin(n)[2:])
 
-    for i in range(-1, -len(mask_str)-1, -1):
-        if mask_str[i] == '0':
+    for i in range(-1, -len(mask_str) - 1, -1):
+        if mask_str[i] == "0":
             continue
 
         else:
@@ -65,6 +69,7 @@ def mask_num_v2(n: int, mask_str: str) -> set[int]:
     result = floating(bn)
 
     return result
+
 
 def part_1():
     lines = get_input()
@@ -83,6 +88,7 @@ def part_1():
 
     print(f"{sum(memory.values())}")
 
+
 def part_2():
     lines = get_input()
 
@@ -100,6 +106,7 @@ def part_2():
                 memory[m_num] = int(v2)
 
     print(f"{sum(memory.values())}")
+
 
 if __name__ == "__main__":
     # part_1()

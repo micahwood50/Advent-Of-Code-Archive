@@ -1,5 +1,6 @@
 FILENAME = "input.txt"
 
+
 class Expression:
     def __init__(self, expression_str: str):
         expression_list = expression_str.split()
@@ -13,7 +14,9 @@ class Expression:
         else:
             self.parse_expression(*expression_list)
 
-    def parse_expression(self, left_literal: str | None, operator: str | None, right_literal: str):
+    def parse_expression(
+        self, left_literal: str | None, operator: str | None, right_literal: str
+    ):
         try:
             self._left_literal = int(left_literal)
         except:
@@ -59,6 +62,7 @@ class Expression:
         else:
             raise ValueError(f"Unknown operator: {self._operator}")
 
+
 class Table:
     def __init__(self):
         self._variable_dict = dict()
@@ -73,6 +77,7 @@ class Table:
 
         return result
 
+
 def get_input() -> Table:
     table = Table()
 
@@ -83,6 +88,7 @@ def get_input() -> Table:
 
     return table
 
+
 def part_1():
     table = get_input()
     WIRE_VAR = "a"
@@ -90,6 +96,7 @@ def part_1():
     result = table.get_value(WIRE_VAR)
 
     print(f"Signal {result} is ultimately provided to wire {WIRE_VAR}")
+
 
 def part_2():
     table1 = get_input()
@@ -101,6 +108,7 @@ def part_2():
     result = table2.get_value(WIRE_VAR)
 
     print(f"Signal {result} is ultimately provided to wire {WIRE_VAR}")
+
 
 if __name__ == "__main__":
     # part_1()

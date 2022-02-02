@@ -1,9 +1,11 @@
 FILENAME = "input.txt"
 
+
 class Food:
     def __init__(self, ingredients: set[str], allergens: set[str]):
         self.ingredients = ingredients
         self.allergens = allergens
+
 
 def get_input() -> list[Food]:
     foods = list()
@@ -12,7 +14,7 @@ def get_input() -> list[Food]:
         for line in f.readlines():
             line = line.strip()
 
-            ing_str, aller_str = line.split(' (contains ')
+            ing_str, aller_str = line.split(" (contains ")
 
             ing_set = set(ing_str.split())
             aller_set = set(aller_str[:-1].split(", "))
@@ -20,6 +22,7 @@ def get_input() -> list[Food]:
             foods.append(Food(ing_set, aller_set))
 
     return foods
+
 
 def part_1():
     food_list = get_input()
@@ -53,6 +56,7 @@ def part_1():
 
     print(f"Ingredients that can't contain any of the allergens appear {count} times.")
 
+
 def part_2():
     food_list = get_input()
 
@@ -82,7 +86,9 @@ def part_2():
                 value -= discovered_aller
 
     print("The canonical dangerous ingredient list is:")
-    print(",".join(list(possible_ing[aller])[0] for aller in sorted(possible_ing.keys())))
+    print(
+        ",".join(list(possible_ing[aller])[0] for aller in sorted(possible_ing.keys()))
+    )
 
 
 if __name__ == "__main__":

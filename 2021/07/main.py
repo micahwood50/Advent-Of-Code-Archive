@@ -2,16 +2,19 @@ from statistics import mean, median
 
 FILENAME = "input.txt"
 
+
 def triangular_number(num: int) -> int:
-    return num*(num+1)//2
+    return num * (num + 1) // 2
+
 
 def get_input() -> list[int]:
     position_list = list()
 
     with open(FILENAME) as file:
-        position_list = list(map(int, file.readline().split(',')))
+        position_list = list(map(int, file.readline().split(",")))
 
     return position_list
+
 
 def part_1():
     position_list = get_input()
@@ -22,6 +25,7 @@ def part_1():
         fuel_total += abs(desired_position - position)
 
     print(f"They need to spend {fuel_total} fuels")
+
 
 def part_2():
     position_list = get_input()
@@ -37,6 +41,7 @@ def part_2():
         fuel_total = min(fuel_total, this_fuel_total)
 
     print(f"They need to spend {fuel_total} fuels")
+
 
 if __name__ == "__main__":
     # part_1()

@@ -3,22 +3,23 @@ import re
 
 FILENAME = "input.txt"
 
+
 class Height(NamedTuple):
     measurement: int
     unit: str
 
-class Passport():
-    def __init__(self,
-        byr: int, iyr: int, eyr: int, hgt: Height,
-        hcl: str, ecl: str, pid: str
+
+class Passport:
+    def __init__(
+        self, byr: int, iyr: int, eyr: int, hgt: Height, hcl: str, ecl: str, pid: str
     ):
-        self.byr = byr # Birth Year
-        self.iyr = iyr # Issue Year
-        self.eyr = eyr # Expiration Year
-        self.hgt = hgt # Height
-        self.hcl = hcl # Hair Color
-        self.ecl = ecl # Eye Color
-        self.pid = pid # Passport ID
+        self.byr = byr  # Birth Year
+        self.iyr = iyr  # Issue Year
+        self.eyr = eyr  # Expiration Year
+        self.hgt = hgt  # Height
+        self.hcl = hcl  # Hair Color
+        self.ecl = ecl  # Eye Color
+        self.pid = pid  # Passport ID
 
     def is_valid(self) -> bool:
         if not (1920 <= self.byr <= 2002):
@@ -51,8 +52,9 @@ class Passport():
 
         return True
 
+
 def parse_passport(passport_string: str) -> Passport:
-    """ Take in string and parse it into Passport object
+    """Take in string and parse it into Passport object
 
     Args:
         passport_string (str): A string of single passport
@@ -74,13 +76,13 @@ def parse_passport(passport_string: str) -> Passport:
 
     # Check if these key exists If not, throw KeyError. These keys all must exist.
     if not (
-        "byr" in fields_dict and \
-        "iyr" in fields_dict and \
-        "eyr" in fields_dict and \
-        "hgt" in fields_dict and \
-        "hcl" in fields_dict and \
-        "ecl" in fields_dict and \
-        "pid" in fields_dict
+        "byr" in fields_dict
+        and "iyr" in fields_dict
+        and "eyr" in fields_dict
+        and "hgt" in fields_dict
+        and "hcl" in fields_dict
+        and "ecl" in fields_dict
+        and "pid" in fields_dict
     ):
         raise KeyError
 
@@ -92,11 +94,12 @@ def parse_passport(passport_string: str) -> Passport:
         Height(int(fields_dict["hgt"][:-2]), fields_dict["hgt"][-2:]),
         fields_dict["hcl"],
         fields_dict["ecl"],
-        fields_dict["pid"]
+        fields_dict["pid"],
     )
 
+
 def get_input() -> List[str]:
-    """ Read the file and generate a list of passport strings
+    """Read the file and generate a list of passport strings
 
     Returns:
         [List[str]]: A list of passport strings
@@ -122,6 +125,7 @@ def get_input() -> List[str]:
 
     return passports
 
+
 def part_1():
     passport_strings = get_input()
     count = 0
@@ -140,6 +144,7 @@ def part_1():
 
     print(f"There are {count} valid passport")
 
+
 def part_2():
     passport_strings = get_input()
     count = 0
@@ -153,6 +158,7 @@ def part_2():
             pass
 
     print(f"There are {count} valid passport")
+
 
 if __name__ == "__main__":
     # part_1()

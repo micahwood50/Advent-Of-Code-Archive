@@ -1,5 +1,6 @@
 FILENAME = "input.txt"
 
+
 def look_and_say_generator(number: int) -> int:
     number = str(number)
     curr_ch = number[0]
@@ -24,11 +25,13 @@ def look_and_say_generator(number: int) -> int:
         curr_ch = number[0]
         count = 0
 
+
 def get_input() -> int:
     with open(FILENAME) as file:
         number = int(file.readline())
 
     return number
+
 
 def part_1():
     number = get_input()
@@ -39,7 +42,8 @@ def part_1():
 
     print(f"The length of the result is {len(str(number))}")
 
-def part_2(): ### NOTE: This part is very slow
+
+def part_2():  ### NOTE: This part is very slow
     number = get_input()
     gen = look_and_say_generator(number)
 
@@ -47,6 +51,7 @@ def part_2(): ### NOTE: This part is very slow
         number = next(gen)
 
     print(f"The length of the result is {len(str(number))}")
+
 
 if __name__ == "__main__":
     # part_1()

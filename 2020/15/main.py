@@ -1,10 +1,11 @@
 from typing import List, Iterator
 from collections import defaultdict
 
-INPUT = [13,16,0,12,15,1]
+INPUT = [13, 16, 0, 12, 15, 1]
+
 
 def vaneck(init_seq: List[int]) -> Iterator[int]:
-    """ Calculate and yield number in the Van Eck sequence with
+    """Calculate and yield number in the Van Eck sequence with
         customized starting set
 
     Args:
@@ -20,7 +21,7 @@ def vaneck(init_seq: List[int]) -> Iterator[int]:
     # The list contains up to last 2 turns when the number was spoken
     spoken_dict = defaultdict(list)
 
-    for i, e in enumerate(init_seq, start = 1):
+    for i, e in enumerate(init_seq, start=1):
         if len(spoken_dict[e]) == 2:
             spoken_dict[e] = spoken_dict[e][1:] + [i]
 
@@ -48,21 +49,24 @@ def vaneck(init_seq: List[int]) -> Iterator[int]:
         turn_num += 1
         yield curr
 
+
 def part_1():
     vaneck_generator = vaneck(INPUT)
 
-    for turn, num in enumerate(vaneck_generator, start = 1):
+    for turn, num in enumerate(vaneck_generator, start=1):
         if turn == 2020:
             print(f"Turn {turn}: {num}")
             return
 
+
 def part_2():
     vaneck_generator = vaneck(INPUT)
 
-    for turn, num in enumerate(vaneck_generator, start = 1):
+    for turn, num in enumerate(vaneck_generator, start=1):
         if turn == 30_000_000:
             print(f"Turn {turn}: {num}")
             return
+
 
 if __name__ == "__main__":
     # part_1()
