@@ -44,7 +44,7 @@ class Reindeer:
         )
 
 
-def get_input() -> dict[str, dict[str, int]]:
+def get_input() -> list[Reindeer]:
     reindeer_list = list()
 
     with open(FILENAME) as file:
