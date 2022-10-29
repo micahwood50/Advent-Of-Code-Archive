@@ -1,5 +1,5 @@
 # Advent Of Code Archive
-All my solutions for past [Advent of Code](https://adventofcode.com) events. Any feedback is welcome!
+All my solutions for past [Advent of Code](https://adventofcode.com) events. I am still solving problems to this day. Any feedback is welcome!
 
 <br />
 
