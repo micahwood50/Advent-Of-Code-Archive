@@ -8,7 +8,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2015/06/main.py)|[**Day 7**](2015/07/main.py)|[**Day 8**](2015/08/main.py)|[**Day 9**](2015/09/main.py)|[**Day 10**](2015/10/main.py)|
 |[**Day 11**](2015/11/main.py)|[**Day 12**](2015/12/main.py)|[**Day 13**](2015/13/main.py)|[**Day 14**](2015/14/main.py)|[**Day 15**](2015/15/main.py)|
-|[**Day 16**](2015/16/main.py)|[**Day 17**](2015/17/main.py)|[**Day 18**]|[**Day 19**]|[**Day 20**]|
+|[**Day 16**](2015/16/main.py)|[**Day 17**](2015/17/main.py)|[**Day 18**]|[**Day 19**]|[**Day 20**](2015/20/main.py)|
 |[**Day 21**]|[**Day 22**]|[**Day 23**]|[**Day 24**]|[**Day 25**]|
 
 <br />
