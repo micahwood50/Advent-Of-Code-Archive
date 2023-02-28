@@ -1,5 +1,6 @@
 from header import *
 
+
 def count_adjacent_occupied(grid: list[list[str]], row: int, col: int) -> int:
     count = 0
 
@@ -9,6 +10,7 @@ def count_adjacent_occupied(grid: list[list[str]], row: int, col: int) -> int:
                 count += 1
 
     return count
+
 
 def iterate_grid(grid: list[list[str]]) -> list[list[str]]:
     result = deepcopy(grid)
@@ -24,6 +26,7 @@ def iterate_grid(grid: list[list[str]]) -> list[list[str]]:
                 result[i][j] = EMPTY
 
     return result
+
 
 def run_solution(grid_input: list[list[str]]):
     grid = deepcopy(grid_input)

@@ -1,14 +1,15 @@
 # Evaluate the expression that is guaranteed to have no parentheses
 def aoc_raw_eval(expression: str) -> int:
-    S = expression.split('*')
+    S = expression.split("*")
     result = 1
 
     for s in S:
-        sm = map(int, s.split('+'))
+        sm = map(int, s.split("+"))
         ss = sum(sm)
         result *= ss
 
     return result
+
 
 def aoc_eval(expression: str) -> int:
     new_expression = ""
@@ -18,23 +19,23 @@ def aoc_eval(expression: str) -> int:
     while i < len(expression):
         ch = expression[i]
 
-        if ch == '(':
+        if ch == "(":
             lp = 1
             i += 1
 
             ri = i
 
             while lp > 0:
-                if expression[ri] == '(':
+                if expression[ri] == "(":
                     lp += 1
 
-                elif expression[ri] == ')':
+                elif expression[ri] == ")":
                     lp -= 1
 
                 ri += 1
 
-            new_expression += str(aoc_eval(expression[i:ri-1]))
-            i = ri-1
+            new_expression += str(aoc_eval(expression[i : ri - 1]))
+            i = ri - 1
 
         else:
             new_expression += ch
