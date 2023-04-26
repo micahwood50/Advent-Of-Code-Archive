@@ -63,7 +63,7 @@ def part_2():
     while universes_dict:
         universes_temp_dict = defaultdict(int)
 
-        for ((positions, scores), universes_count) in universes_dict.items():
+        for (positions, scores), universes_count in universes_dict.items():
             for dice_result, universes_multiplier in DIRAC_DICT.items():
                 positions_list = list(positions)
                 scores_list = list(scores)

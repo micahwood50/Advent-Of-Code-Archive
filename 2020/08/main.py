@@ -49,7 +49,6 @@ def simulate(
     acc: int = 0,
     visited: Set[int] = None,
 ) -> int:
-
     if visited is None:
         visited = set()
 
@@ -100,7 +99,6 @@ def part_2():
     visited = set()
 
     while True:
-
         if line_num in visited:
             raise InfiniteLoopError
 
