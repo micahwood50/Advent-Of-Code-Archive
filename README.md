@@ -34,7 +34,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # 2018
-|[Day 1](2018/01/main.py)|[Day 2](2018/02/main.py)|[Day 3]|[Day 4]|[Day 5]|
+|[Day 1](2018/01/main.py)|[Day 2](2018/02/main.py)|[Day 3](2018/03/main.py)|[Day 4](2018/04/main.py)|[Day 5]|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**]|[**Day 7**]|[**Day 8**]|[**Day 9**]|[**Day 10**]|
 |[**Day 11**]|[**Day 12**]|[**Day 13**]|[**Day 14**]|[**Day 15**]|
