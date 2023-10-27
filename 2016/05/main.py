@@ -24,7 +24,7 @@ def part_1():
 
         index += 1
 
-    print(f"Answer is {"".join(password)}")
+    print(f"Answer is {''.join(password)}")
 
 
 def part_2():
@@ -46,7 +46,7 @@ def part_2():
 
         index += 1
 
-    print(f"Answer is {"".join(password)}")
+    print(f"Answer is {''.join(password)}")
 
 
 if __name__ == "__main__":
