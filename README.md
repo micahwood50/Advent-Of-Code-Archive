@@ -26,7 +26,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 # [2017](https://adventofcode.com/2017/)
 |[Day 1](2017/01/main.py)|[Day 2](2017/02/main.py)|[Day 3](2017/03/main.py)|[Day 4](2017/04/main.py)|[Day 5](2017/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
-|[**Day 6**]|[**Day 7**]|[**Day 8**]|[**Day 9**]|[**Day 10**]|
+|[**Day 6**](2017/06/main.py)|[**Day 7**]|[**Day 8**]|[**Day 9**]|[**Day 10**]|
 |[**Day 11**]|[**Day 12**]|[**Day 13**]|[**Day 14**]|[**Day 15**]|
 |[**Day 16**]|[**Day 17**]|[**Day 18**]|[**Day 19**]|[**Day 20**]|
 |[**Day 21**]|[**Day 22**]|[**Day 23**]|[**Day 24**]|[**Day 25**]|
