@@ -1,9 +1,11 @@
 # Advent Of Code Archive
+
 All my solutions for past [Advent of Code](https://adventofcode.com) events. I am still solving problems to this day. Any feedback is welcome!
 
 <br />
 
 # [2015](https://adventofcode.com/2015/)
+
 |[Day 1](2015/01/main.py)|[Day 2](2015/02/main.py)|[Day 3](2015/03/main.py)|[Day 4](2015/04/main.py)|[Day 5](2015/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2015/06/main.py)|[**Day 7**](2015/07/main.py)|[**Day 8**](2015/08/main.py)|[**Day 9**](2015/09/main.py)|[**Day 10**](2015/10/main.py)|
@@ -14,6 +16,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # [2016](https://adventofcode.com/2016/)
+
 |[Day 1](2016/01/main.py)|[Day 2](2016/02/main.py)|[Day 3](2016/03/main.py)|[Day 4](2016/04/main.py)|[Day 5](2016/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2016/06/main.py)|[**Day 7**](2016/07/main.py)|[**Day 8**]|[**Day 9**]|[**Day 10**]|
@@ -24,9 +27,10 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # [2017](https://adventofcode.com/2017/)
+
 |[Day 1](2017/01/main.py)|[Day 2](2017/02/main.py)|[Day 3](2017/03/main.py)|[Day 4](2017/04/main.py)|[Day 5](2017/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
-|[**Day 6**](2017/06/main.py)|[**Day 7**](2017/07/main.py)|[**Day 8**]|[**Day 9**]|[**Day 10**]|
+|[**Day 6**](2017/06/main.py)|[**Day 7**](2017/07/main.py)|[**Day 8**](2017/08/main.py)|[**Day 9**]|[**Day 10**]|
 |[**Day 11**]|[**Day 12**]|[**Day 13**]|[**Day 14**]|[**Day 15**]|
 |[**Day 16**]|[**Day 17**]|[**Day 18**]|[**Day 19**]|[**Day 20**]|
 |[**Day 21**]|[**Day 22**]|[**Day 23**]|[**Day 24**]|[**Day 25**]|
@@ -34,6 +38,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # [2018](https://adventofcode.com/2018/)
+
 |[Day 1](2018/01/main.py)|[Day 2](2018/02/main.py)|[Day 3](2018/03/main.py)|[Day 4](2018/04/main.py)|[Day 5](2018/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2018/06/main.py)|[**Day 7**]|[**Day 8**]|[**Day 9**]|[**Day 10**]|
@@ -44,6 +49,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # [2019](https://adventofcode.com/2019/)
+
 |[Day 1](2019/01/main.py)|[Day 2](2019/02/main.py)|[Day 3](2019/03/main.py)|[Day 4](2019/04/main.py)|[Day 5]|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**]|[**Day 7**]|[**Day 8**]|[**Day 9**]|[**Day 10**]|
@@ -54,6 +60,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # [2020](https://adventofcode.com/2020/)
+
 |[Day 1](2020/01/main.py)|[Day 2](2020/02/main.py)|[Day 3](2020/03/main.py)|[Day 4](2020/04/main.py)|[Day 5](2020/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2020/06/main.py)|[**Day 7**](2020/07/main.py)|[**Day 8**](2020/08/main.py)|[**Day 9**](2020/09/main.py)|[**Day 10**](2020/10/main.py)|
@@ -64,6 +71,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # [2021](https://adventofcode.com/2021/)
+
 |[Day 1](2021/01/main.py)|[Day 2](2021/02/main.py)|[Day 3](2021/03/main.py)|[Day 4](2021/04/main.py)|[Day 5](2021/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2021/06/main.py)|[**Day 7**](2021/07/main.py)|[**Day 8**](2021/08/main.py)|[**Day 9**](2021/09/main.py)|[**Day 10**](2021/10/main.py)|
@@ -74,6 +82,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # [2022](https://adventofcode.com/2022/)
+
 |[Day 1](2022/01/main.py)|[Day 2](2022/02/main.py)|[Day 3](2022/03/main.py)|[Day 4](2022/04/main.py)|[Day 5](2022/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2022/06/main.py)|[**Day 7**](2022/07/main.py)|[**Day 8**](2022/08/main.py)|[**Day 9**](2022/09/main.py)|[**Day 10**](2022/10/main.py)|
@@ -84,6 +93,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 <br />
 
 # [2023](https://adventofcode.com/2023/)
+
 |[Day 1]|[Day 2]|[Day 3]|[Day 4]|[Day 5]|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**]|[**Day 7**]|[**Day 8**]|[**Day 9**]|[**Day 10**]|
