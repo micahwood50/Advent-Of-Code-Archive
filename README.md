@@ -21,7 +21,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2016/06/main.py)|[**Day 7**](2016/07/main.py)|[**Day 8**](2016/08/main.py)|[**Day 9**](2016/09/main.py)|[**Day 10**](2016/10/main.py)|
 |[**Day 11**]|[**Day 12**](2016/12/main.py)|[**Day 13**]|[**Day 14**]|[**Day 15**]|
-|[**Day 16**]|[**Day 17**]|[**Day 18**]|[**Day 19**]|[**Day 20**]|
+|[**Day 16**]|[**Day 17**]|[**Day 18**]|[**Day 19**]|[**Day 20**](2016/20/main.py)|
 |[**Day 21**]|[**Day 22**]|[**Day 23**]|[**Day 24**]|[**Day 25**]|
 
 <br />
