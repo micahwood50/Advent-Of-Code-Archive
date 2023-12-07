@@ -86,7 +86,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 |[Day 1](2022/01/main.py)|[Day 2](2022/02/main.py)|[Day 3](2022/03/main.py)|[Day 4](2022/04/main.py)|[Day 5](2022/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2022/06/main.py)|[**Day 7**](2022/07/main.py)|[**Day 8**](2022/08/main.py)|[**Day 9**](2022/09/main.py)|[**Day 10**](2022/10/main.py)|
-|[**Day 11**](2022/11/main.py)|[**Day 12**]|[**Day 13**]|[**Day 14**]|[**Day 15**]|
+|[**Day 11**]|[**Day 12**]|[**Day 13**]|[**Day 14**]|[**Day 15**]|
 |[**Day 16**]|[**Day 17**]|[**Day 18**]|[**Day 19**]|[**Day 20**]|
 |[**Day 21**](2022/21/main.py)|[**Day 22**]|[**Day 23**]|[**Day 24**]|[**Day 25**]|
 
