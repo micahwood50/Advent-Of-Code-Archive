@@ -97,6 +97,6 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 |[Day 1](2023/01/main.py)|[Day 2](2023/02/main.py)|[Day 3](2023/03/main.py)|[Day 4](2023/04/main.py)|[Day 5](2023/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**](2023/06/main.py)|[**Day 7**](2023/07/main.py)|[**Day 8**](2023/08/main.py)|[**Day 9**](2023/09/main.py)|[**Day 10**](2023/10/main.py)|
-|[**Day 11**]|[**Day 12**]|[**Day 13**]|[**Day 14**]|[**Day 15**]|
+|[**Day 11**](2023/11/main.py)|[**Day 12**]|[**Day 13**]|[**Day 14**]|[**Day 15**]|
 |[**Day 16**]|[**Day 17**]|[**Day 18**]|[**Day 19**]|[**Day 20**]|
 |[**Day 21**]|[**Day 22**]|[**Day 23**]|[**Day 24**]|[**Day 25**]|
