@@ -23,7 +23,7 @@ def get_input() -> list[list[str]]:
 
     with open(FILENAME) as file:
         for line in file.readlines():
-            grid.append([ch for ch in line.strip()])
+            grid.append(list(line.strip()))
 
     return grid
 
