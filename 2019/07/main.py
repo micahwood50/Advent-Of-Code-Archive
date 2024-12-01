@@ -65,9 +65,9 @@ class Intcode:
                     self.instruction_pointer += 4
 
                 case "03":  # Get input
-                    self.input[
-                        self.input[self.instruction_pointer + 1]
-                    ] = self.input_history[self.comp_input_pointer]
+                    self.input[self.input[self.instruction_pointer + 1]] = (
+                        self.input_history[self.comp_input_pointer]
+                    )
 
                     self.instruction_pointer += 2
                     self.comp_input_pointer += 1

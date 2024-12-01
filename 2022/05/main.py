@@ -35,9 +35,11 @@ class Stacks:
         for height_i in range(max_height - 1, -1, -1):
             for i in range(len(self.stacks)):
                 print(
-                    f"[{self.stacks[i][height_i]}]"
-                    if len(self.stacks[i]) > height_i
-                    else "   ",
+                    (
+                        f"[{self.stacks[i][height_i]}]"
+                        if len(self.stacks[i]) > height_i
+                        else "   "
+                    ),
                     end=" ",
                 )
             print()
