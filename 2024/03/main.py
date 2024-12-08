@@ -9,8 +9,6 @@ def get_input() -> str:
     with open(FILENAME) as file:
         return file.read().strip()
 
-    return string_list
-
 
 def part_1():
     memory = get_input()
