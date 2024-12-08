@@ -4,8 +4,6 @@ FILENAME = "input.txt"
 
 
 def get_input() -> str:
-    string_list = list()
-
     with open(FILENAME) as file:
         return file.read().strip()
 
