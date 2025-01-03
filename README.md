@@ -105,7 +105,7 @@ All my solutions for past [Advent of Code](https://adventofcode.com) events. I a
 
 # [2024](https://adventofcode.com/2024/)
 
-|[Day 1](2024/01/main.py)|[Day 2](2024/02/main.py)|[Day 3](2024/03/main.py)|[Day 4](2024/04/main.py)|[Day 5]|
+|[Day 1](2024/01/main.py)|[Day 2](2024/02/main.py)|[Day 3](2024/03/main.py)|[Day 4](2024/04/main.py)|[Day 5](2024/05/main.py)|
 | :---: | :---: | :---: | :---: | :---: |
 |[**Day 6**]|[**Day 7**]|[**Day 8**]|[**Day 9**]|[**Day 10**]|
 |[**Day 11**]|[**Day 12**]|[**Day 13**]|[**Day 14**]|[**Day 15**]|
